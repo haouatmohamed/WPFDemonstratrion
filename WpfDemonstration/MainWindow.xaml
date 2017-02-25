@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfDemonstration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDemonstration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox x:Name="listBox" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="188" Margin="20,25,0,0" VerticalAlignment="Top" Width="244" SelectionChanged="listBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="x:type Project ">
+                    <TextBlock Text="{Binding Path=Name}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+
+        <ListBox x:Name="DependenciesListBox" ItemsSource="{Binding Path=PathsOfDependencies}"  HorizontalAlignment="Left" Height="272" Margin="281,25,0,0" VerticalAlignment="Top" Width="216"/>
+        <Label x:Name="label" Content="choose project" HorizontalAlignment="Left" Margin="20,-1,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="project dependencie's paths" HorizontalAlignment="Left" Margin="281,-1,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="show dependencies" HorizontalAlignment="Left" Margin="34,250,0,0" VerticalAlignment="Top" Width="114"/>
+        <Button x:Name="button1" Content="Add a dependency" HorizontalAlignment="Left" Margin="153,250,0,0" VerticalAlignment="Top" Width="111"/>
+
+    </Grid>
+</Window>
