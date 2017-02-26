@@ -60,5 +60,14 @@ namespace WpfDemonstration
         {
             DependenciesListBox.DataContext = listBox.SelectedValue as Project;
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            AddDependencyDialogWindow dialog = new AddDependencyDialogWindow();
+            if (dialog.ShowDialog() == true)
+            {
+                (listBox.SelectedValue as Project).PathsOfDependencies.Add(dialog.path);
+            }
+        }
     }
 }

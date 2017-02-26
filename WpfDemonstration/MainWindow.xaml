@@ -20,8 +20,7 @@
         <ListBox x:Name="DependenciesListBox" ItemsSource="{Binding Path=PathsOfDependencies}"  HorizontalAlignment="Left" Height="272" Margin="281,25,0,0" VerticalAlignment="Top" Width="216"/>
         <Label x:Name="label" Content="choose project" HorizontalAlignment="Left" Margin="20,-1,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy" Content="project dependencie's paths" HorizontalAlignment="Left" Margin="281,-1,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="show dependencies" HorizontalAlignment="Left" Margin="34,250,0,0" VerticalAlignment="Top" Width="114"/>
-        <Button x:Name="button1" Content="Add a dependency" HorizontalAlignment="Left" Margin="153,250,0,0" VerticalAlignment="Top" Width="111"/>
+        <Button x:Name="button1" Content="Add a dependency" HorizontalAlignment="Left" Margin="63,230,0,0" VerticalAlignment="Top" Width="168" Click="button1_Click"/>
 
     </Grid>
 </Window>
